@@ -1,6 +1,6 @@
 # BleakInjector
 > An injector that suppport various Inject mode.
-BleakInjector is a simple Injector that use Bleak, Reloaded.Injector,... to inject dll to process.
+- BleakInjector is a simple Injector that use Bleak, Reloaded.Injector,... to inject dll to process.
 ## Features
 - Inject using CreateThread,HijackThread,ManualMap(by Bleak) and more...
 ## Installation
