@@ -1,0 +1,169 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BleakInjector/1.0.0": {
+        "dependencies": {
+          "Bleak": "3.1.1",
+          "Reloaded.Injector": "1.2.3"
+        },
+        "runtime": {
+          "BleakInjector.dll": {}
+        }
+      },
+      "Bleak/3.1.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/Bleak.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PeNet/0.8.1": {
+        "dependencies": {
+          "PeNet.Asn1": "1.3.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PeNet.dll": {
+            "assemblyVersion": "0.8.1.0",
+            "fileVersion": "0.8.1.0"
+          }
+        }
+      },
+      "PeNet.Asn1/1.3.1": {
+        "runtime": {
+          "lib/netstandard2.0/PeNet.Asn1.dll": {
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
+          }
+        }
+      },
+      "Reloaded.Assembler/1.0.6": {
+        "dependencies": {
+          "Reloaded.Memory.Buffers": "1.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Assembler.dll": {
+            "assemblyVersion": "1.0.6.0",
+            "fileVersion": "1.0.6.0"
+          }
+        }
+      },
+      "Reloaded.Injector/1.2.3": {
+        "dependencies": {
+          "PeNet": "0.8.1",
+          "Reloaded.Assembler": "1.0.6",
+          "Reloaded.Memory": "1.4.1",
+          "Reloaded.Memory.Buffers": "1.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Injector.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        }
+      },
+      "Reloaded.Memory/1.4.1": {
+        "dependencies": {
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Memory.dll": {
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.4.1.0"
+          }
+        }
+      },
+      "Reloaded.Memory.Buffers/1.2.0": {
+        "dependencies": {
+          "Reloaded.Memory": "1.4.1",
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Memory.Buffers.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "System.Memory/4.5.3": {},
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {}
+    }
+  },
+  "libraries": {
+    "BleakInjector/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bleak/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rFygeg/TRkEMlId4Sq6Jaawua8x3sKTiqdFw/SjN/IL8Ls9s7PJPhgSwj9lqDHrA/rOBIpYyAGD+4TotX1/3Jg==",
+      "path": "bleak/3.1.1",
+      "hashPath": "bleak.3.1.1.nupkg.sha512"
+    },
+    "PeNet/0.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RJ2yrFMbAukncCJLoNzddZrxKpVWwaEn/2rNFgfxUnHoUs/ggI17zaK6ejcUOArqmbPBDV5GIVEwfjZVEPyBiw==",
+      "path": "penet/0.8.1",
+      "hashPath": "penet.0.8.1.nupkg.sha512"
+    },
+    "PeNet.Asn1/1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2FImZRtab/UDLtRHSseFpT7R3OfkRIoyfJKibJSxDcYU57zMkUeR2qBnLsbhnepz1HJI9ZS9yMB89HtYQVN3AA==",
+      "path": "penet.asn1/1.3.1",
+      "hashPath": "penet.asn1.1.3.1.nupkg.sha512"
+    },
+    "Reloaded.Assembler/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Pf2uP+2fY6jgdfKYSYdXwid3WdbP5Hfo708j1Ug2fym9Xddlc0OvuO99KgZmxZhcszP80A0GZbpf1OUXjadxGQ==",
+      "path": "reloaded.assembler/1.0.6",
+      "hashPath": "reloaded.assembler.1.0.6.nupkg.sha512"
+    },
+    "Reloaded.Injector/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+BjLfjXGgYHaBz95M9mCNNO4T9+OGQt0aJseC2pjkROGlWokutm+uhQxu3kEAlrHVD66y52r79kiIKgsNQA3Yg==",
+      "path": "reloaded.injector/1.2.3",
+      "hashPath": "reloaded.injector.1.2.3.nupkg.sha512"
+    },
+    "Reloaded.Memory/1.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YVdF/zDAO748BvqdkBKdl+6FfTzQJkx2IrcvM9EII0ZIdCIQIqTqZcDjJ6D3cQlnQlHpwFX72cs7n63zCZna7Q==",
+      "path": "reloaded.memory/1.4.1",
+      "hashPath": "reloaded.memory.1.4.1.nupkg.sha512"
+    },
+    "Reloaded.Memory.Buffers/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B+HHUihJb08zikqlZY2f5TDqSE7/w/N9yG99nFhXjryMgW1rz1iUV4emGNnTTncF7YwBvZkZ9gyfMwKJryCxiQ==",
+      "path": "reloaded.memory.buffers/1.2.0",
+      "hashPath": "reloaded.memory.buffers.1.2.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    }
+  }
+}

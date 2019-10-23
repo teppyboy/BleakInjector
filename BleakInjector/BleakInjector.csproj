@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>BleakInjector.Program</StartupObject>
+    <ApplicationIcon />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bleak" Version="3.1.1" />
+    <PackageReference Include="Reloaded.Injector" Version="1.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="BleakMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BleakMain.Designer.cs">
+      <DependentUpon>BleakMain.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="BleakMain.resx">
+      <DependentUpon>BleakMain.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Project="..\TestProject\TestProject.projitems" Label="Shared" />
+
+</Project>

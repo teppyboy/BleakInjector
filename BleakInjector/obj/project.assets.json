@@ -1,0 +1,359 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Bleak/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Bleak.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Bleak.dll": {}
+        }
+      },
+      "PeNet/0.8.1": {
+        "type": "package",
+        "dependencies": {
+          "PeNet.Asn1": "1.3.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/PeNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PeNet.dll": {}
+        }
+      },
+      "PeNet.Asn1/1.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PeNet.Asn1.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PeNet.Asn1.dll": {}
+        }
+      },
+      "Reloaded.Assembler/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Reloaded.Memory.Buffers": "1.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Reloaded.Assembler.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Assembler.dll": {}
+        },
+        "build": {
+          "build/Reloaded.Assembler.targets": {}
+        }
+      },
+      "Reloaded.Injector/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "PeNet": "0.8.1",
+          "Reloaded.Assembler": "1.0.6",
+          "Reloaded.Memory": "1.4.1",
+          "Reloaded.Memory.Buffers": "1.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Reloaded.Injector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Injector.dll": {}
+        }
+      },
+      "Reloaded.Memory/1.4.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Reloaded.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Memory.dll": {}
+        }
+      },
+      "Reloaded.Memory.Buffers/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Reloaded.Memory": "1.2.2",
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Reloaded.Memory.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Memory.Buffers.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bleak/3.1.1": {
+      "sha512": "rFygeg/TRkEMlId4Sq6Jaawua8x3sKTiqdFw/SjN/IL8Ls9s7PJPhgSwj9lqDHrA/rOBIpYyAGD+4TotX1/3Jg==",
+      "type": "package",
+      "path": "bleak/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bleak.3.1.1.nupkg.sha512",
+        "bleak.nuspec",
+        "lib/netcoreapp3.0/Bleak.dll",
+        "lib/netcoreapp3.0/Bleak.xml"
+      ]
+    },
+    "PeNet/0.8.1": {
+      "sha512": "RJ2yrFMbAukncCJLoNzddZrxKpVWwaEn/2rNFgfxUnHoUs/ggI17zaK6ejcUOArqmbPBDV5GIVEwfjZVEPyBiw==",
+      "type": "package",
+      "path": "penet/0.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/PeNet.dll",
+        "lib/net461/PeNet.dll",
+        "lib/netstandard2.0/PeNet.dll",
+        "penet.0.8.1.nupkg.sha512",
+        "penet.nuspec"
+      ]
+    },
+    "PeNet.Asn1/1.3.1": {
+      "sha512": "2FImZRtab/UDLtRHSseFpT7R3OfkRIoyfJKibJSxDcYU57zMkUeR2qBnLsbhnepz1HJI9ZS9yMB89HtYQVN3AA==",
+      "type": "package",
+      "path": "penet.asn1/1.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/PeNet.Asn1.dll",
+        "lib/net461/PeNet.Asn1.dll",
+        "lib/netstandard1.6/PeNet.Asn1.dll",
+        "lib/netstandard2.0/PeNet.Asn1.dll",
+        "penet.asn1.1.3.1.nupkg.sha512",
+        "penet.asn1.nuspec"
+      ]
+    },
+    "Reloaded.Assembler/1.0.6": {
+      "sha512": "Pf2uP+2fY6jgdfKYSYdXwid3WdbP5Hfo708j1Ug2fym9Xddlc0OvuO99KgZmxZhcszP80A0GZbpf1OUXjadxGQ==",
+      "type": "package",
+      "path": "reloaded.assembler/1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/FASM-LICENSE.TXT",
+        "build/FASM.DLL",
+        "build/FASMX64.DLL",
+        "build/Reloaded.Assembler.targets",
+        "lib/net452/Reloaded.Assembler.dll",
+        "lib/net452/Reloaded.Assembler.pdb",
+        "lib/net452/Reloaded.Assembler.xml",
+        "lib/net47/Reloaded.Assembler.dll",
+        "lib/net47/Reloaded.Assembler.pdb",
+        "lib/net47/Reloaded.Assembler.xml",
+        "lib/netstandard2.0/Reloaded.Assembler.dll",
+        "lib/netstandard2.0/Reloaded.Assembler.pdb",
+        "lib/netstandard2.0/Reloaded.Assembler.xml",
+        "reloaded.assembler.1.0.6.nupkg.sha512",
+        "reloaded.assembler.nuspec"
+      ]
+    },
+    "Reloaded.Injector/1.2.3": {
+      "sha512": "+BjLfjXGgYHaBz95M9mCNNO4T9+OGQt0aJseC2pjkROGlWokutm+uhQxu3kEAlrHVD66y52r79kiIKgsNQA3Yg==",
+      "type": "package",
+      "path": "reloaded.injector/1.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net452/Reloaded.Injector.dll",
+        "lib/net452/Reloaded.Injector.xml",
+        "lib/net47/Reloaded.Injector.dll",
+        "lib/net47/Reloaded.Injector.xml",
+        "lib/netstandard2.0/Reloaded.Injector.dll",
+        "lib/netstandard2.0/Reloaded.Injector.xml",
+        "reloaded.injector.1.2.3.nupkg.sha512",
+        "reloaded.injector.nuspec"
+      ]
+    },
+    "Reloaded.Memory/1.4.1": {
+      "sha512": "YVdF/zDAO748BvqdkBKdl+6FfTzQJkx2IrcvM9EII0ZIdCIQIqTqZcDjJ6D3cQlnQlHpwFX72cs7n63zCZna7Q==",
+      "type": "package",
+      "path": "reloaded.memory/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net452/Reloaded.Memory.dll",
+        "lib/net452/Reloaded.Memory.xml",
+        "lib/net47/Reloaded.Memory.dll",
+        "lib/net47/Reloaded.Memory.xml",
+        "lib/netstandard2.0/Reloaded.Memory.dll",
+        "lib/netstandard2.0/Reloaded.Memory.xml",
+        "reloaded.memory.1.4.1.nupkg.sha512",
+        "reloaded.memory.nuspec"
+      ]
+    },
+    "Reloaded.Memory.Buffers/1.2.0": {
+      "sha512": "B+HHUihJb08zikqlZY2f5TDqSE7/w/N9yG99nFhXjryMgW1rz1iUV4emGNnTTncF7YwBvZkZ9gyfMwKJryCxiQ==",
+      "type": "package",
+      "path": "reloaded.memory.buffers/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net452/Reloaded.Memory.Buffers.dll",
+        "lib/net452/Reloaded.Memory.Buffers.xml",
+        "lib/net47/Reloaded.Memory.Buffers.dll",
+        "lib/net47/Reloaded.Memory.Buffers.xml",
+        "lib/netstandard2.0/Reloaded.Memory.Buffers.dll",
+        "lib/netstandard2.0/Reloaded.Memory.Buffers.xml",
+        "reloaded.memory.buffers.1.2.0.nupkg.sha512",
+        "reloaded.memory.buffers.nuspec"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Bleak >= 3.1.1",
+      "Reloaded.Injector >= 1.2.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\tretrauit\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\tretrauit\\Documents\\BleakInjector\\BleakInjector\\BleakInjector\\BleakInjector.csproj",
+      "projectName": "BleakInjector",
+      "projectPath": "C:\\Users\\tretrauit\\Documents\\BleakInjector\\BleakInjector\\BleakInjector\\BleakInjector.csproj",
+      "packagesPath": "C:\\Users\\tretrauit\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tretrauit\\Documents\\BleakInjector\\BleakInjector\\BleakInjector\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\tretrauit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "Bleak": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "Reloaded.Injector": {
+            "target": "Package",
+            "version": "[1.2.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview1-014459\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
