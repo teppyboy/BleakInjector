@@ -3,6 +3,7 @@
 - BleakInjector is a simple Injector that use Bleak, Reloaded.Injector,... to inject dll to process.
 ## Features
 - Inject using CreateThread,HijackThread,ManualMap(by Bleak) and more...
+- Bypass Anti-Injector detect (Finobe as an example)
 ## Installation
 ```
 NET Core:
