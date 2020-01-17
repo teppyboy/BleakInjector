@@ -285,24 +285,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tretrauit\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\tretr\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tretrauit\\Documents\\BleakInjector\\BleakInjector\\BleakInjector\\BleakInjector.csproj",
+      "projectUniqueName": "E:\\BleakInjector\\BleakInjector\\BleakInjector\\BleakInjector.csproj",
       "projectName": "BleakInjector",
-      "projectPath": "C:\\Users\\tretrauit\\Documents\\BleakInjector\\BleakInjector\\BleakInjector\\BleakInjector.csproj",
-      "packagesPath": "C:\\Users\\tretrauit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tretrauit\\Documents\\BleakInjector\\BleakInjector\\BleakInjector\\obj\\",
+      "projectPath": "E:\\BleakInjector\\BleakInjector\\BleakInjector\\BleakInjector.csproj",
+      "packagesPath": "C:\\Users\\tretr\\.nuget\\packages\\",
+      "outputPath": "E:\\BleakInjector\\BleakInjector\\BleakInjector\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\tretrauit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\tretr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -352,7 +353,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview1-014459\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
