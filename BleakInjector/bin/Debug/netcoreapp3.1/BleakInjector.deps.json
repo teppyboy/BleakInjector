@@ -9,7 +9,10 @@
       "BleakInjector/1.0.0": {
         "dependencies": {
           "Bleak": "3.1.1",
-          "Reloaded.Injector": "1.2.3"
+          "Costura.Fody": "4.1.0",
+          "Fody": "6.0.6",
+          "Lunar": "1.0.1",
+          "Reloaded.Injector": "1.2.4"
         },
         "runtime": {
           "BleakInjector.dll": {}
@@ -18,6 +21,16 @@
       "Bleak/3.1.1": {
         "runtime": {
           "lib/netcoreapp3.0/Bleak.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Costura.Fody/4.1.0": {},
+      "Fody/6.0.6": {},
+      "Lunar/1.0.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/Lunar.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -42,53 +55,53 @@
           }
         }
       },
-      "Reloaded.Assembler/1.0.6": {
+      "Reloaded.Assembler/1.0.8": {
         "dependencies": {
-          "Reloaded.Memory.Buffers": "1.2.0"
+          "Reloaded.Memory.Buffers": "1.3.4"
         },
         "runtime": {
           "lib/netstandard2.0/Reloaded.Assembler.dll": {
-            "assemblyVersion": "1.0.6.0",
-            "fileVersion": "1.0.6.0"
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
           }
         }
       },
-      "Reloaded.Injector/1.2.3": {
+      "Reloaded.Injector/1.2.4": {
         "dependencies": {
           "PeNet": "0.8.1",
-          "Reloaded.Assembler": "1.0.6",
-          "Reloaded.Memory": "1.4.1",
-          "Reloaded.Memory.Buffers": "1.2.0"
+          "Reloaded.Assembler": "1.0.8",
+          "Reloaded.Memory": "2.5.0",
+          "Reloaded.Memory.Buffers": "1.3.4"
         },
         "runtime": {
           "lib/netstandard2.0/Reloaded.Injector.dll": {
-            "assemblyVersion": "1.2.3.0",
-            "fileVersion": "1.2.3.0"
+            "assemblyVersion": "1.2.4.0",
+            "fileVersion": "1.2.4.0"
           }
         }
       },
-      "Reloaded.Memory/1.4.1": {
+      "Reloaded.Memory/2.5.0": {
         "dependencies": {
           "System.Memory": "4.5.3",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/Reloaded.Memory.dll": {
-            "assemblyVersion": "1.4.1.0",
-            "fileVersion": "1.4.1.0"
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
           }
         }
       },
-      "Reloaded.Memory.Buffers/1.2.0": {
+      "Reloaded.Memory.Buffers/1.3.4": {
         "dependencies": {
-          "Reloaded.Memory": "1.4.1",
+          "Reloaded.Memory": "2.5.0",
           "System.Memory": "4.5.3",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/Reloaded.Memory.Buffers.dll": {
-            "assemblyVersion": "1.2.0.0",
-            "fileVersion": "1.2.0.0"
+            "assemblyVersion": "1.3.4.0",
+            "fileVersion": "1.3.4.0"
           }
         }
       },
@@ -109,6 +122,27 @@
       "path": "bleak/3.1.1",
       "hashPath": "bleak.3.1.1.nupkg.sha512"
     },
+    "Costura.Fody/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MkW5aqhqNvuP6MiaaD5Yx8efXv+5ucsumRx+Nsn5b+PA4RnaxJLtXhGkm1N+Hi7sjkSlL8kl1klSS/7v2DxZHw==",
+      "path": "costura.fody/4.1.0",
+      "hashPath": "costura.fody.4.1.0.nupkg.sha512"
+    },
+    "Fody/6.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tNCYcVEHdSwhsRR+5APfLFHbp2TXJHw2URa1N3rM3nRrorQYquobqbnuRllr0x8SKSNyz4ZhIKhaA1MdieX3Tw==",
+      "path": "fody/6.0.6",
+      "hashPath": "fody.6.0.6.nupkg.sha512"
+    },
+    "Lunar/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziV6pnkb+60ESGmaBsY+KBgtQ0bqfF3bmL+F506/Kt29LBAMbQu1TS/3+bR3x7mxo+vchJht8DZMhZ5X8i9SlA==",
+      "path": "lunar/1.0.1",
+      "hashPath": "lunar.1.0.1.nupkg.sha512"
+    },
     "PeNet/0.8.1": {
       "type": "package",
       "serviceable": true,
@@ -123,33 +157,33 @@
       "path": "penet.asn1/1.3.1",
       "hashPath": "penet.asn1.1.3.1.nupkg.sha512"
     },
-    "Reloaded.Assembler/1.0.6": {
+    "Reloaded.Assembler/1.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Pf2uP+2fY6jgdfKYSYdXwid3WdbP5Hfo708j1Ug2fym9Xddlc0OvuO99KgZmxZhcszP80A0GZbpf1OUXjadxGQ==",
-      "path": "reloaded.assembler/1.0.6",
-      "hashPath": "reloaded.assembler.1.0.6.nupkg.sha512"
+      "sha512": "sha512-9cIG04Wd3fSkNMGNYZocGdCovpncDW1sevN9Z7nE3pFaVhmfTcjmUZ0O+3Xc16PC73+2hemK/X2ZEGQ8dJI5mw==",
+      "path": "reloaded.assembler/1.0.8",
+      "hashPath": "reloaded.assembler.1.0.8.nupkg.sha512"
     },
-    "Reloaded.Injector/1.2.3": {
+    "Reloaded.Injector/1.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+BjLfjXGgYHaBz95M9mCNNO4T9+OGQt0aJseC2pjkROGlWokutm+uhQxu3kEAlrHVD66y52r79kiIKgsNQA3Yg==",
-      "path": "reloaded.injector/1.2.3",
-      "hashPath": "reloaded.injector.1.2.3.nupkg.sha512"
+      "sha512": "sha512-hQTAArWIeaLQdlkGYigcwmCttZzhM0mf4Op7M1v2VdLs+6uPIceY3L8C/QtaYKw9j2bSoeKXnRNyNY2P3bOPOQ==",
+      "path": "reloaded.injector/1.2.4",
+      "hashPath": "reloaded.injector.1.2.4.nupkg.sha512"
     },
-    "Reloaded.Memory/1.4.1": {
+    "Reloaded.Memory/2.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YVdF/zDAO748BvqdkBKdl+6FfTzQJkx2IrcvM9EII0ZIdCIQIqTqZcDjJ6D3cQlnQlHpwFX72cs7n63zCZna7Q==",
-      "path": "reloaded.memory/1.4.1",
-      "hashPath": "reloaded.memory.1.4.1.nupkg.sha512"
+      "sha512": "sha512-epozZI1jbRx9fg1zydBsVxgsnkyLvmMO8G4D0nWgEjHhBEs+KbX9TiBrY5mfmnlFHygxJcZp6PKSeOmyMv2x3Q==",
+      "path": "reloaded.memory/2.5.0",
+      "hashPath": "reloaded.memory.2.5.0.nupkg.sha512"
     },
-    "Reloaded.Memory.Buffers/1.2.0": {
+    "Reloaded.Memory.Buffers/1.3.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-B+HHUihJb08zikqlZY2f5TDqSE7/w/N9yG99nFhXjryMgW1rz1iUV4emGNnTTncF7YwBvZkZ9gyfMwKJryCxiQ==",
-      "path": "reloaded.memory.buffers/1.2.0",
-      "hashPath": "reloaded.memory.buffers.1.2.0.nupkg.sha512"
+      "sha512": "sha512-RDLiTJHXQtGMqFZ2tyqZcGAXStlbzLIZ3LVMXRxAv1EE1kum4YyWuGNHcJjanWbO+0NZahuRkDuy6Hz430OMHA==",
+      "path": "reloaded.memory.buffers/1.3.4",
+      "hashPath": "reloaded.memory.buffers.1.3.4.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",

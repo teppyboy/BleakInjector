@@ -17,7 +17,7 @@
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.OpenProcessesGroupBox = new System.Windows.Forms.GroupBox();
             this.RefreshButton = new System.Windows.Forms.Button();
             this.ProcessDataGrid = new System.Windows.Forms.DataGridView();
@@ -37,6 +37,7 @@
             this.StatusGroupBox = new System.Windows.Forms.GroupBox();
             this.StatusLabel = new System.Windows.Forms.Label();
             this.FileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ListType = new System.Windows.Forms.Button();
             this.OpenProcessesGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessDataGrid)).BeginInit();
             this.InjectorGroupBox.SuspendLayout();
@@ -46,6 +47,7 @@
             // 
             // OpenProcessesGroupBox
             // 
+            this.OpenProcessesGroupBox.Controls.Add(this.ListType);
             this.OpenProcessesGroupBox.Controls.Add(this.RefreshButton);
             this.OpenProcessesGroupBox.Controls.Add(this.ProcessDataGrid);
             this.OpenProcessesGroupBox.Font = new System.Drawing.Font("Century Gothic", 8.25F);
@@ -64,12 +66,13 @@
             this.RefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.RefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton.Font = new System.Drawing.Font("Century Gothic", 7F);
             this.RefreshButton.Location = new System.Drawing.Point(6, 19);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(181, 23);
+            this.RefreshButton.Size = new System.Drawing.Size(23, 23);
             this.RefreshButton.TabIndex = 3;
             this.RefreshButton.TabStop = false;
-            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.Text = "⭮";
             this.RefreshButton.UseVisualStyleBackColor = false;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
@@ -84,14 +87,14 @@
             this.ProcessDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ProcessDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ProcessDataGrid.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProcessDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProcessDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.ProcessDataGrid.GridColor = System.Drawing.Color.White;
             this.ProcessDataGrid.Location = new System.Drawing.Point(6, 48);
             this.ProcessDataGrid.Name = "ProcessDataGrid";
@@ -313,6 +316,22 @@
             this.FileDialog.InitialDirectory = "@\"C:\\\"";
             this.FileDialog.Title = "Choose a DLL";
             // 
+            // ListType
+            // 
+            this.ListType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.ListType.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ListType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ListType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ListType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ListType.Font = new System.Drawing.Font("Century Gothic", 7F);
+            this.ListType.Location = new System.Drawing.Point(35, 19);
+            this.ListType.Name = "ListType";
+            this.ListType.Size = new System.Drawing.Size(152, 23);
+            this.ListType.TabIndex = 4;
+            this.ListType.TabStop = false;
+            this.ListType.Text = "List Type: X";
+            this.ListType.UseVisualStyleBackColor = false;
+            // 
             // BleakMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +380,7 @@
         private System.Windows.Forms.CheckBox EraseHeadersCheckBox;
         private System.Windows.Forms.Label StatusLabel;
         private System.Windows.Forms.CheckBox isBypassMode;
+        private System.Windows.Forms.Button ListType;
     }
 }
 

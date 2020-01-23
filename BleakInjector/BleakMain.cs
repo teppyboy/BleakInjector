@@ -27,6 +27,7 @@ namespace BleakInjector
             MethodComboBox.Items.Add("[BLEAK] ManualMap");
             MethodComboBox.Items.Add("BasicInjector");
             MethodComboBox.Items.Add("[RI] Injector");
+            MethodComboBox.Items.Add("[LUNAR] Injector");
             if (Program.isBypasserMode)
             {
                 isBypassMode.Checked = true;
@@ -50,8 +51,6 @@ namespace BleakInjector
         private void PopulateDataTable()
         {
             var processes = Process.GetProcesses();
-
-
             foreach (var process in processes)
             {
                 _processTable.Rows.Add(process.ProcessName);
@@ -135,7 +134,6 @@ namespace BleakInjector
                 p.StartInfo.FileName = Program.rootAppExe;
                 p.StartInfo.Arguments = "-clrtemp." + currappname;
                 p.Start();
-                p.Dispose();
                 Environment.Exit(0);
             }
         }

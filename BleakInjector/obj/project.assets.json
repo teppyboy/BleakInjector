@@ -11,6 +11,27 @@
           "lib/netcoreapp3.0/Bleak.dll": {}
         }
       },
+      "Costura.Fody/4.1.0": {
+        "type": "package",
+        "build": {
+          "build/Costura.Fody.props": {}
+        }
+      },
+      "Fody/6.0.6": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
+      "Lunar/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Lunar.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Lunar.dll": {}
+        }
+      },
       "PeNet/0.8.1": {
         "type": "package",
         "dependencies": {
@@ -32,10 +53,10 @@
           "lib/netstandard2.0/PeNet.Asn1.dll": {}
         }
       },
-      "Reloaded.Assembler/1.0.6": {
+      "Reloaded.Assembler/1.0.8": {
         "type": "package",
         "dependencies": {
-          "Reloaded.Memory.Buffers": "1.2.0"
+          "Reloaded.Memory.Buffers": "1.3.3"
         },
         "compile": {
           "lib/netstandard2.0/Reloaded.Assembler.dll": {}
@@ -47,13 +68,13 @@
           "build/Reloaded.Assembler.targets": {}
         }
       },
-      "Reloaded.Injector/1.2.3": {
+      "Reloaded.Injector/1.2.4": {
         "type": "package",
         "dependencies": {
           "PeNet": "0.8.1",
-          "Reloaded.Assembler": "1.0.6",
-          "Reloaded.Memory": "1.4.1",
-          "Reloaded.Memory.Buffers": "1.2.0"
+          "Reloaded.Assembler": "1.0.8",
+          "Reloaded.Memory": "2.5.0",
+          "Reloaded.Memory.Buffers": "1.3.4"
         },
         "compile": {
           "lib/netstandard2.0/Reloaded.Injector.dll": {}
@@ -62,7 +83,7 @@
           "lib/netstandard2.0/Reloaded.Injector.dll": {}
         }
       },
-      "Reloaded.Memory/1.4.1": {
+      "Reloaded.Memory/2.5.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3",
@@ -75,11 +96,11 @@
           "lib/netstandard2.0/Reloaded.Memory.dll": {}
         }
       },
-      "Reloaded.Memory.Buffers/1.2.0": {
+      "Reloaded.Memory.Buffers/1.3.4": {
         "type": "package",
         "dependencies": {
-          "Reloaded.Memory": "1.2.2",
-          "System.Memory": "4.5.1",
+          "Reloaded.Memory": "2.5.0",
+          "System.Memory": "4.5.3",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
@@ -123,6 +144,68 @@
         "lib/netcoreapp3.0/Bleak.xml"
       ]
     },
+    "Costura.Fody/4.1.0": {
+      "sha512": "MkW5aqhqNvuP6MiaaD5Yx8efXv+5ucsumRx+Nsn5b+PA4RnaxJLtXhGkm1N+Hi7sjkSlL8kl1klSS/7v2DxZHw==",
+      "type": "package",
+      "path": "costura.fody/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Costura.Fody.props",
+        "costura.fody.4.1.0.nupkg.sha512",
+        "costura.fody.nuspec",
+        "lib/net40/Costura.dll",
+        "lib/net40/Costura.xml",
+        "weaver/Costura.Fody.dll",
+        "weaver/Costura.Fody.xcf"
+      ]
+    },
+    "Fody/6.0.6": {
+      "sha512": "tNCYcVEHdSwhsRR+5APfLFHbp2TXJHw2URa1N3rM3nRrorQYquobqbnuRllr0x8SKSNyz4ZhIKhaA1MdieX3Tw==",
+      "type": "package",
+      "path": "fody/6.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Fody.targets",
+        "fody.6.0.6.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb"
+      ]
+    },
+    "Lunar/1.0.1": {
+      "sha512": "ziV6pnkb+60ESGmaBsY+KBgtQ0bqfF3bmL+F506/Kt29LBAMbQu1TS/3+bR3x7mxo+vchJht8DZMhZ5X8i9SlA==",
+      "type": "package",
+      "path": "lunar/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/Lunar.dll",
+        "lib/netcoreapp3.1/Lunar.xml",
+        "lunar.1.0.1.nupkg.sha512",
+        "lunar.nuspec"
+      ]
+    },
     "PeNet/0.8.1": {
       "sha512": "RJ2yrFMbAukncCJLoNzddZrxKpVWwaEn/2rNFgfxUnHoUs/ggI17zaK6ejcUOArqmbPBDV5GIVEwfjZVEPyBiw==",
       "type": "package",
@@ -152,10 +235,10 @@
         "penet.asn1.nuspec"
       ]
     },
-    "Reloaded.Assembler/1.0.6": {
-      "sha512": "Pf2uP+2fY6jgdfKYSYdXwid3WdbP5Hfo708j1Ug2fym9Xddlc0OvuO99KgZmxZhcszP80A0GZbpf1OUXjadxGQ==",
+    "Reloaded.Assembler/1.0.8": {
+      "sha512": "9cIG04Wd3fSkNMGNYZocGdCovpncDW1sevN9Z7nE3pFaVhmfTcjmUZ0O+3Xc16PC73+2hemK/X2ZEGQ8dJI5mw==",
       "type": "package",
-      "path": "reloaded.assembler/1.0.6",
+      "path": "reloaded.assembler/1.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -173,17 +256,18 @@
         "lib/netstandard2.0/Reloaded.Assembler.dll",
         "lib/netstandard2.0/Reloaded.Assembler.pdb",
         "lib/netstandard2.0/Reloaded.Assembler.xml",
-        "reloaded.assembler.1.0.6.nupkg.sha512",
+        "reloaded.assembler.1.0.8.nupkg.sha512",
         "reloaded.assembler.nuspec"
       ]
     },
-    "Reloaded.Injector/1.2.3": {
-      "sha512": "+BjLfjXGgYHaBz95M9mCNNO4T9+OGQt0aJseC2pjkROGlWokutm+uhQxu3kEAlrHVD66y52r79kiIKgsNQA3Yg==",
+    "Reloaded.Injector/1.2.4": {
+      "sha512": "hQTAArWIeaLQdlkGYigcwmCttZzhM0mf4Op7M1v2VdLs+6uPIceY3L8C/QtaYKw9j2bSoeKXnRNyNY2P3bOPOQ==",
       "type": "package",
-      "path": "reloaded.injector/1.2.3",
+      "path": "reloaded.injector/1.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE",
         "lib/net452/Reloaded.Injector.dll",
         "lib/net452/Reloaded.Injector.xml",
@@ -191,14 +275,14 @@
         "lib/net47/Reloaded.Injector.xml",
         "lib/netstandard2.0/Reloaded.Injector.dll",
         "lib/netstandard2.0/Reloaded.Injector.xml",
-        "reloaded.injector.1.2.3.nupkg.sha512",
+        "reloaded.injector.1.2.4.nupkg.sha512",
         "reloaded.injector.nuspec"
       ]
     },
-    "Reloaded.Memory/1.4.1": {
-      "sha512": "YVdF/zDAO748BvqdkBKdl+6FfTzQJkx2IrcvM9EII0ZIdCIQIqTqZcDjJ6D3cQlnQlHpwFX72cs7n63zCZna7Q==",
+    "Reloaded.Memory/2.5.0": {
+      "sha512": "epozZI1jbRx9fg1zydBsVxgsnkyLvmMO8G4D0nWgEjHhBEs+KbX9TiBrY5mfmnlFHygxJcZp6PKSeOmyMv2x3Q==",
       "type": "package",
-      "path": "reloaded.memory/1.4.1",
+      "path": "reloaded.memory/2.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -209,17 +293,18 @@
         "lib/net47/Reloaded.Memory.xml",
         "lib/netstandard2.0/Reloaded.Memory.dll",
         "lib/netstandard2.0/Reloaded.Memory.xml",
-        "reloaded.memory.1.4.1.nupkg.sha512",
+        "reloaded.memory.2.5.0.nupkg.sha512",
         "reloaded.memory.nuspec"
       ]
     },
-    "Reloaded.Memory.Buffers/1.2.0": {
-      "sha512": "B+HHUihJb08zikqlZY2f5TDqSE7/w/N9yG99nFhXjryMgW1rz1iUV4emGNnTTncF7YwBvZkZ9gyfMwKJryCxiQ==",
+    "Reloaded.Memory.Buffers/1.3.4": {
+      "sha512": "RDLiTJHXQtGMqFZ2tyqZcGAXStlbzLIZ3LVMXRxAv1EE1kum4YyWuGNHcJjanWbO+0NZahuRkDuy6Hz430OMHA==",
       "type": "package",
-      "path": "reloaded.memory.buffers/1.2.0",
+      "path": "reloaded.memory.buffers/1.3.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE",
         "lib/net452/Reloaded.Memory.Buffers.dll",
         "lib/net452/Reloaded.Memory.Buffers.xml",
@@ -227,7 +312,7 @@
         "lib/net47/Reloaded.Memory.Buffers.xml",
         "lib/netstandard2.0/Reloaded.Memory.Buffers.dll",
         "lib/netstandard2.0/Reloaded.Memory.Buffers.xml",
-        "reloaded.memory.buffers.1.2.0.nupkg.sha512",
+        "reloaded.memory.buffers.1.3.4.nupkg.sha512",
         "reloaded.memory.buffers.nuspec"
       ]
     },
@@ -281,7 +366,10 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Bleak >= 3.1.1",
-      "Reloaded.Injector >= 1.2.3"
+      "Costura.Fody >= 4.1.0",
+      "Fody >= 6.0.6",
+      "Lunar >= 1.0.1",
+      "Reloaded.Injector >= 1.2.4"
     ]
   },
   "packageFolders": {
@@ -330,9 +418,23 @@
             "target": "Package",
             "version": "[3.1.1, )"
           },
+          "Costura.Fody": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
+          "Fody": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[6.0.6, )"
+          },
+          "Lunar": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Reloaded.Injector": {
             "target": "Package",
-            "version": "[1.2.3, )"
+            "version": "[1.2.4, )"
           }
         },
         "imports": [

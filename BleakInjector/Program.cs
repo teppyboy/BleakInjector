@@ -5,11 +5,12 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using Bleak;
 using BleakInjector.Etc;
 using BleakInjector.AdditionalInjector;
+using Lunar;
 
 namespace BleakInjector
 {
@@ -36,10 +37,12 @@ namespace BleakInjector
                 else if (args[0].Contains("-clrtemp."))
                 {
                     var tempfile = args[0].Replace("-clrtemp.", "");
+                    Console.WriteLine("[DEBUG]: Temporary file: " + tempfile);
                     foreach (Process proc in Process.GetProcessesByName(tempfile))
                     {
                         proc.Kill();
                     }
+                    Thread.Sleep(250);
                     File.Delete(tempfile);
                     Environment.Exit(0);
                 }
@@ -51,6 +54,7 @@ namespace BleakInjector
                     {
                         proc.Kill();
                     }
+                    Thread.Sleep(250);
                     File.Delete(tempfile);
                     rootAppExe = Path.GetFileName(Process.GetCurrentProcess().MainModule.FileName);
                 }
@@ -67,7 +71,8 @@ namespace BleakInjector
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error has occured, sorry :(\nIf you can launch this app with -CSole paramenter, reporduce this error then copy that and make a issue,Thank you.\nBelow is error i logged for who can't use -CSole paramenter.\n" + ex,"BleakInjector");
+                MessageBox.Show("An error has occured, sorry :(\nBelow is error i logged:\n" + ex,"BleakInjector");
+                Environment.Exit(0);
             }
         }
         internal static readonly char[] chars =
@@ -95,25 +100,47 @@ namespace BleakInjector
         {
             if (config.EraseHeaders)
             {
-                // Inject using specified method
-
                 switch (config.InjectionMethod)
                 {
                     case "[BLEAK] CreateThread":
-                        var Injekt = new Injector(config.ProcessName, config.DllPath, InjectionMethod.CreateThread);
-                        Injekt.EjectDll();
+                        try
+                        {
+                            var Injekt = new Injector(config.ProcessName, config.DllPath, InjectionMethod.CreateThread);
+                            Injekt.EjectDll();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Eject failed using Bleak-CreateThread.\nError:\n{ex}", "BleakInjector");
+                            break;
+                        }
                         Status.EraseHeadersOutcome = true;
                         break;
 
                     case "[BLEAK] HijackThread":
-                        var Injekt2 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.HijackThread);
-                        Injekt2.EjectDll();
+                        try
+                        {
+                            var Injekt2 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.HijackThread);
+                            Injekt2.EjectDll();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Bleak-HijackThread.\nError:\n{ex}", "BleakInjector");
+                            break;
+                        }
                         Status.EraseHeadersOutcome = true;
                         break;
 
                     case "[BLEAK] ManualMap":
-                        var Injekt3 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.ManualMap);
-                        Injekt3.EjectDll();
+                        try
+                        {
+                            var Injekt3 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.ManualMap);
+                            Injekt3.EjectDll();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Bleak-ManualMap.\nError:\n{ex}", "BleakInjector");
+                            break;
+                        }
                         Status.EraseHeadersOutcome = true;
                         break;
                     case "BasicInjector":
@@ -121,6 +148,22 @@ namespace BleakInjector
                         break;
                     case "[RI] Injector":
                         MessageBox.Show("This inject type dosen't support Eject.", "BleakInjector");
+                        break;
+                    case "[LUNAR] Injector":
+                        try
+                        {
+                            foreach (Process proc in Process.GetProcessesByName(config.ProcessName))
+                            {
+                                var LibMapper = new LibraryMapper(proc, config.DllPath);
+                                LibMapper.UnmapLibrary();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Lunar.\nError:\n{ex}", "BleakInjector");
+                            break;
+                        }
+                        Status.EraseHeadersOutcome = true;
                         break;
                 }
             }
@@ -129,65 +172,132 @@ namespace BleakInjector
                 switch (config.InjectionMethod)
                 {
                     case "[BLEAK] CreateThread":
-                        var Injekt = new Injector(config.ProcessName, config.DllPath, InjectionMethod.CreateThread);
-                        if (Injekt.InjectDll() != IntPtr.Zero)
+                        try
                         {
-                            Injekt.Dispose();
-                            Status.InjectionOutcome = true;
+                            var Injekt = new Injector(config.ProcessName, config.DllPath, InjectionMethod.CreateThread);
+                            if (Injekt.InjectDll() != IntPtr.Zero)
+                            {
+                                Injekt.Dispose();
+                                Status.InjectionOutcome = true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Inject failed using Bleak-CreateThread.\nError: Unknown.", "BleakInjector");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Bleak-CreateThread.\nError:\n{ex}", "BleakInjector");
                         }
                         break;
 
                     case "[BLEAK] HijackThread":
-                        var Injekt2 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.HijackThread);
-                        if (Injekt2.InjectDll() != IntPtr.Zero)
+                        try
                         {
-                            Injekt2.Dispose();
-                            Status.InjectionOutcome = true;
+                            var Injekt2 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.HijackThread);
+                            if (Injekt2.InjectDll() != IntPtr.Zero)
+                            {
+                                Injekt2.Dispose();
+                                Status.InjectionOutcome = true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Inject failed using Bleak-HijackThread.\nError: Unknown.", "BleakInjector");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Bleak-HijackThread.\nError:\n{ex}", "BleakInjector");
                         }
                         break;
 
                     case "[BLEAK] ManualMap":
-                        var Injekt3 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.ManualMap);
-                        if (Injekt3.InjectDll() != IntPtr.Zero)
+                        try
                         {
-                            Injekt3.Dispose();
-                            Status.InjectionOutcome = true;
+                            var Injekt3 = new Injector(config.ProcessName, config.DllPath, InjectionMethod.ManualMap);
+                            if (Injekt3.InjectDll() != IntPtr.Zero)
+                            {
+                                Injekt3.Dispose();
+                                Status.InjectionOutcome = true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Inject failed using Bleak-ManualMap.\nError: Unknown.", "BleakInjector");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Bleak-ManualMap.\nError:\n{ex}", "BleakInjector");
                         }
                         break;
                     case "BasicInjector":
-                        if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.Success)
+                        try
                         {
-                            Status.InjectionOutcome = true;
+                            if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.Success)
+                            {
+                                Status.InjectionOutcome = true;
+                            }
+                            else
+                            {
+                                if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.DllNotFound)
+                                {
+                                    MessageBox.Show("Inject failed using BasicInjector.\nError: Dll not found.", "BleakInjector");
+                                }
+                                else if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.GameProcessNotFound)
+                                {
+                                    MessageBox.Show("Inject failed using BasicInjector.\nError: Target process isn't running.", "BleakInjector");
+                                }
+                                else if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.InjectionFailed)
+                                {
+                                    MessageBox.Show("Inject failed using BasicInjector.\nError: Unknown.", "BleakInjector");
+                                }
+                            }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.DllNotFound)
-                            {
-                                MessageBox.Show("Inject failed using BasicInjector.\nError: Dll not found.", "BleakInjector");
-                            }
-                            else if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.GameProcessNotFound)
-                            {
-                                MessageBox.Show("Inject failed using BasicInjector.\nError: Target process isn't running.", "BleakInjector");
-                            }
-                            else if (DllInjector.BasicInject(config.ProcessName, config.DllPath) == DllInjectionResult.InjectionFailed)
-                            {
-                                MessageBox.Show("Inject failed using BasicInjector.\nError: Unknown.", "BleakInjector");
-                            }
+                            MessageBox.Show($"Inject failed using BasicInjector.\nError:\n{ex}", "BleakInjector");
                         }
                         break;
                     case "[RI] Injector":
-                        foreach (Process proc in Process.GetProcessesByName(config.ProcessName))
+                        try
                         {
-                            var Injecc = new Reloaded.Injector.Injector(proc);
-                            Injecc.Inject(config.DllPath);
-                            Injecc.Dispose();
+                            foreach (Process proc in Process.GetProcessesByName(config.ProcessName))
+                            {
+                                var Injecc = new Reloaded.Injector.Injector(proc);
+                                if (Injecc.Inject(config.DllPath) != 0)
+                                    break;
+                                else
+                                    MessageBox.Show("Inject failed using Reloaded Injector.\nError: Unknown.", "BleakInjector");
+                                Injecc.Dispose();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Reloaded Injector.\nError:\n{ex}", "BleakInjector");
+                            break;
+                        }
+                        Status.InjectionOutcome = true;
+                        break;
+                    case "[LUNAR] Injector":
+                        try
+                        {
+                            foreach (Process proc in Process.GetProcessesByName(config.ProcessName))
+                            {
+                                var LibMapper = new LibraryMapper(proc, config.DllPath);
+                                LibMapper.MapLibrary();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Inject failed using Lunar.\nError:\n{ex}", "BleakInjector");
+                            break;
                         }
                         Status.InjectionOutcome = true;
                         break;
                 }
                 if (config.CloseAfterInject)
                 {
-                    Application.Exit();
+                   Environment.Exit(0);
                 }
             }
             return Status;
